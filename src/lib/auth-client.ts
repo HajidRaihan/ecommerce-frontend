@@ -9,8 +9,7 @@ export const authClient = createAuthClient({
       type: "Bearer",
       token: async () => {
         const token = localStorage.getItem(LOCAL_STORAGE_BETTER_AUTH_TOKEN_KEY);
-
-        return token ?? undefined;
+        return token || undefined;
       },
     },
   },
